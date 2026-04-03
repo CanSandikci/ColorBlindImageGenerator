@@ -1,0 +1,119 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #141420; color: #e6e6f0;
+  min-height: 100vh; display: flex; justify-content: center;
+  padding: 40px 16px;
+}
+.wrap { width: 100%; max-width: 640px; }
+
+h1 { font-size: 1.7rem; margin-bottom: 4px; }
+.sub { color: #9696aa; font-size: 0.85rem; margin-bottom: 32px; }
+
+label {
+  display: block; font-size: 0.75rem; color: #9696aa;
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px;
+}
+.field { margin-bottom: 22px; }
+
+/* Drop zone */
+.drop {
+  border: 2px dashed #3a3a50; border-radius: 12px;
+  padding: 36px 20px; text-align: center; cursor: pointer;
+  background: #1a1a2a; transition: border-color .2s, background .2s;
+}
+.drop:hover, .drop.over { border-color: #648cff; background: #1e1e32; }
+.drop.ok { border-color: #50c878; background: #1a2a1e; }
+.drop .icon { font-size: 1.8rem; margin-bottom: 6px; }
+.drop .txt { color: #9696aa; font-size: .88rem; }
+.drop .name { color: #50c878; font-weight: 600; margin-top: 4px; font-size: .92rem; }
+.drop input { display: none; }
+
+.preview { margin-top: 10px; text-align: center; display: none; }
+.preview img { max-width: 100%; max-height: 160px; border-radius: 8px; border: 1px solid #2a2a3a; }
+
+/* Folder row */
+.folder-row { display: flex; gap: 8px; align-items: center; }
+.folder-path {
+  flex: 1; background: #1e1e2e; border: 1px solid #2e2e40; border-radius: 8px;
+  padding: 9px 12px; font-size: .88rem; color: #7a7a90;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-height: 38px;
+}
+.folder-path.set { color: #e6e6f0; }
+.btn-sm {
+  background: #2c2c3e; color: #c0c0d0; border: 1px solid #3a3a50;
+  border-radius: 8px; padding: 9px 14px; font-size: .83rem;
+  cursor: pointer; white-space: nowrap; font-family: inherit;
+}
+.btn-sm:hover { background: #38384e; border-color: #648cff; }
+.folder-note { font-size: .72rem; color: #5a5a6e; margin-top: 4px; }
+
+/* Select */
+select {
+  appearance: none;
+  background: #1e1e2e url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239696aa' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 12px center;
+  color: #e6e6f0; border: 1px solid #2e2e40; border-radius: 8px;
+  padding: 9px 36px 9px 12px; font-size: .92rem; font-family: inherit;
+  cursor: pointer; width: 160px;
+}
+select:focus { outline: none; border-color: #648cff; }
+
+/* Button */
+.btn {
+  width: 100%; padding: 14px; border: none; border-radius: 10px;
+  font-size: 1.05rem; font-weight: 700; font-family: inherit;
+  cursor: pointer; background: #648cff; color: #fff;
+  transition: background .15s;
+}
+.btn:hover:not(:disabled) { background: #7ea0ff; }
+.btn:disabled { background: #2e2e40; color: #555568; cursor: not-allowed; }
+
+/* Status / progress */
+.status { text-align: center; margin-top: 14px; font-size: .85rem; min-height: 22px; }
+.status.err { color: #e65050; }
+.status.ok { color: #50c878; }
+.status.busy { color: #648cff; }
+
+.progress-bar {
+  width: 100%; height: 6px; background: #1e1e2e; border-radius: 3px;
+  margin-top: 10px; overflow: hidden; display: none;
+}
+.progress-bar .fill {
+  height: 100%; background: #648cff; border-radius: 3px;
+  width: 0%; transition: width .3s;
+}
+
+.spinner {
+  display: inline-block; width: 16px; height: 16px;
+  border: 2px solid #648cff; border-top-color: transparent;
+  border-radius: 50%; animation: spin .6s linear infinite;
+  vertical-align: middle; margin-right: 6px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Results */
+.results { margin-top: 28px; display: none; }
+.results h2 { font-size: 1rem; margin-bottom: 14px; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.gallery .card { text-align: center; }
+.gallery img {
+  width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 8px;
+  background: #1a1a2a; border: 1px solid #2a2a3a; cursor: pointer;
+  transition: border-color .2s;
+}
+.gallery img:hover { border-color: #648cff; }
+.gallery .dl {
+  display: inline-block; margin-top: 4px; font-size: .72rem;
+  color: #648cff; text-decoration: none; cursor: pointer;
+}
+.gallery .dl:hover { text-decoration: underline; }
+
+.footer {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 2px; margin-top: 36px; color: #3a3a4a; font-size: .7rem;
+}

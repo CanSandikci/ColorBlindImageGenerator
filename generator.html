@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ColorBlind Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>ColorBlind Generator</h1>
+  <p class="sub">Generate colorblind test images. Runs entirely in your browser.</p>
+
+  <!-- Image -->
+  <div class="field">
+    <label>Input Image</label>
+    <div class="drop" id="drop">
+      <div class="icon">📁</div>
+      <div class="txt">Drag & drop an image, or click to browse</div>
+      <div class="name" id="fname"></div>
+      <input type="file" id="fileIn" accept="image/*">
+    </div>
+    <div class="preview" id="prevWrap"><img id="prev"></div>
+  </div>
+
+  <!-- Output Folder -->
+  <div class="field">
+    <label>Output Folder</label>
+    <div class="folder-row">
+      <div class="folder-path" id="folderPath">No folder selected</div>
+      <button class="btn-sm" id="btnFolder">Browse</button>
+    </div>
+    <div class="folder-note" id="folderNote">Images are saved directly to the selected folder. Requires Chrome or Edge.</div>
+  </div>
+
+  <!-- Size -->
+  <div class="field">
+    <label>Output Size (px)</label>
+    <select id="size">
+      <option>16</option>
+      <option>32</option>
+      <option>64</option>
+      <option>128</option>
+      <option>256</option>
+      <option selected>512</option>
+      <option>1024</option>
+      <option>2048</option>
+      <option>4096</option>
+      <option>8192</option>
+    </select>
+  </div>
+
+  <button class="btn" id="btnGen" disabled>Generate</button>
+  <div class="progress-bar" id="pbar"><div class="fill" id="pfill"></div></div>
+  <div class="status" id="status"></div>
+
+  <div class="results" id="results">
+    <h2>Results</h2>
+    <div class="gallery" id="gallery"></div>
+  </div>
+
+  <div class="footer">
+    <span>Non-Commercial License. Free to use, modify, and redistribute. Output images are yours.</span>
+    <span>Copyright &copy; 2026 Can D. Sandikci</span>
+  </div>
+</div>
+
+<script src="generator.js"></script>
+</body>
+</html>
