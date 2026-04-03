@@ -8,11 +8,11 @@ The color pairs used for each variant are chosen to represent common types of co
 
 ## Features
 
-- 🎨 Six color-pair variants per image
-- ⚙️ Circle-packing algorithm with gradient and light shift effects
-- 📐 Output sizes from 16 × 16 up to 8192 × 8192 px
-- 💾 Save directly to a local folder (Chrome/Edge) or download individually
-- 🌐 Runs entirely in the browser — no server, no install, no data leaves your machine
+- Six color-pair variants per image
+- Circle-packing algorithm with gradient and light shift effects
+- Output sizes from 16 × 16 up to 8192 × 8192 px
+- Save directly to a local folder (Chrome/Edge) or download individually
+- Runs entirely in the browser — no server, no install, no data leaves your machine
 
 ## Usage
 
