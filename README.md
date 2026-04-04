@@ -4,6 +4,10 @@
 
 The color pairs used for each variant are chosen to represent common types of color vision deficiency, so the original shape remains readable to people with those conditions while appearing as a natural circular dot pattern to others.
 
+Test it out [here](https://colorblindgenerator.netlify.app/)
+
+![](https://img.shields.io/github/repo-size/mariojacob/z-downloads)
+
 ---
 
 ## Features
